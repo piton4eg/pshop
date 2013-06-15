@@ -3,8 +3,11 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0.rc2'
 
 group :development, :test do
-  gem 'sqlite3'
   gem 'rspec-rails', '2.13.2'
+  gem 'guard-rspec', '3.0.2'
+  gem 'spork-rails', github: 'railstutorial/spork-rails'
+  gem 'guard-spork', '1.5.0'
+  gem 'childprocess'
 end
 
 group :test do
@@ -24,6 +27,4 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-group :production do
-  gem 'pg', '0.15.1'
-end
+gem 'pg', '0.15.1'
