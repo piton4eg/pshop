@@ -1,0 +1,13 @@
+- provide(:title, @product.name)
+.product
+	.name
+		h1 Продукт: 
+		= @product.name
+	.description	
+		h2 Описание:
+		= @product.description
+	.image
+		= @product.image_url
+	.price
+		h2 Стоимость:
+		= @product.price

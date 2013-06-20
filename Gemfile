@@ -29,3 +29,4 @@ group :doc do
 end
 
 gem 'pg', '0.15.1'
+gem 'rails-i18n'
