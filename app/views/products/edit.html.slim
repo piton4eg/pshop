@@ -1,0 +1,20 @@
+- provide(:title, 'Изменить продукт')
+h1 Изменить продукт
+div class="row"
+	div class="span3"
+		.form-for = form_for(@product) do |f|
+			= render 'shared/error_messages'
+
+			= f.label :name
+			= f.text_field :name
+			
+			= f.label :description
+			= f.text_area :description, id: "description", rows: 5
+
+			= f.label :image_url
+			= f.text_field :image_url
+
+			= f.label :price
+			= f.text_field :price
+
+			= f.submit "Сохранить", class: "btn btn-primary"

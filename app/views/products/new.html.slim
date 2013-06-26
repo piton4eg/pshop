@@ -1,0 +1,20 @@
+- provide(:title, 'Добавить продукт')
+h1 Добавить продукт
+div class="row"
+	div class="span3"
+		.form-for = form_for(@product) do |f|
+			= render 'shared/error_messages'
+
+			= f.label :name
+			= f.text_field :name, placeholder: :name
+			
+			= f.label :description
+			= f.text_area :description, placeholder: "Описание", id: "description", rows: 5
+
+			= f.label :image_url
+			= f.text_field :image_url, placeholder: "default.png"
+
+			= f.label :price
+			= f.text_field :price, placeholder: 1
+
+			= f.submit "Добавить", class: "btn btn-primary"

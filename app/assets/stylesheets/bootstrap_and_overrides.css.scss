@@ -43,7 +43,7 @@ footer {
 	  	color: $grayDarker;
 	  }
 	}
-	small {
+	.left-text {
   	float: left;
 	}
 	ul {
@@ -54,4 +54,37 @@ footer {
 		  margin-left: 10px;
 		}
 	}
+}
+
+#error_text {
+	color: red;
+}
+
+.form-for {
+	display: block;	
+}
+
+table {
+	td {
+		.left {
+			display: inline-block;
+			float: left;
+			width: 120px;
+		}	
+		.description {
+			display: inline-block;
+			margin-left: 10px;
+		}	
+		.links {
+			float: right;
+		}
+
+		img {
+			width: 100px;
+		}
+	}
+}
+
+#description {
+	resize: none;
 }
