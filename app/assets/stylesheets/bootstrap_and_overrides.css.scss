@@ -67,20 +67,25 @@ footer {
 table {
 	td {
 		.left {
-			display: inline-block;
+			display: block;
 			float: left;
+      margin-right: 10px;
 			width: 120px;
+      .name {
+        font-size: 1.2em;
+        color: $gray;
+      }
+      .foto {
+        padding: 2px;
+        margin-left: auto;
+        margin-right: auto;
+      }
 		}	
 		.description {
-			display: inline-block;
-			margin-left: 10px;
+			
 		}	
 		.links {
 			float: right;
-		}
-
-		img {
-			width: 100px;
 		}
 	}
 }

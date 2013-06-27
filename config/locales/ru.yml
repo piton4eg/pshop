@@ -248,9 +248,6 @@ ru:
       long: ! '%d %B %Y, %H:%M'
       short: ! '%d %b, %H:%M'
     pm: вечера
-  new_product_success: Новый продукт добавлен
-  product_update: Изменения сохранены
-  product_delete: Продукт удален
   # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
   activemodel:
     errors:

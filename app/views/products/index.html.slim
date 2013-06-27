@@ -1,16 +1,15 @@
 # coding: utf-8
 h1 Продукты
 
-div
-  table class="table table-hover"
-    tbody
-      - @products.each do |one_product|
-        tr.one-product 
-          td
-            div.left
-              h2.name = one_product.name
-              .foto = image_tag(one_product.image_url)
-              .price = number_to_currency(one_product.price)
-              .links #{link_to('edit', edit_product_path(one_product), class: "btn")} #{link_to('delete', product_path(one_product), method: :delete, confirm: "Вы уверены?", class: "btn")}
-            .description = sanitize(one_product.description)
+table class="table table-hover"
+  tbody
+    - @products.each do |product|
+      tr.one-product 
+        td
+          .left
+            .name = product.name
+            .foto = image_tag(product.image_url)
+            .price = number_to_currency(product.price)
+            .links #{link_to('edit', edit_product_path(product), class: "btn")} #{link_to('delete', product_path(product), method: :delete, confirm: "Вы уверены?", class: "btn")}
+          .description = sanitize(product.description)
 = link_to 'new', new_product_path, class: "btn btn-primary"

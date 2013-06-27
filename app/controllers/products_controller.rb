@@ -10,7 +10,7 @@ class ProductsController < ApplicationController
 	def create
 		@product = Product.new(product_params)
 		if @product.save
-			flash[:success] = t(:new_product_success)
+			flash[:success] = 'Продукт создан'
       redirect_to @product
 		else
 			render 'new'
@@ -28,7 +28,7 @@ class ProductsController < ApplicationController
 	def update
 		@product = Product.find(params[:id])
 		if @product.update_attributes(product_params)
-      flash[:success] = t(:product_update)
+      flash[:success] = 'Изменения сохранены'
       redirect_to root_path
     else
       render 'edit'
@@ -37,7 +37,7 @@ class ProductsController < ApplicationController
 
 	def destroy
 		Product.find(params[:id]).destroy
-		flash[:success] = t(:product_delete)
+		flash[:success] = 'Продукт удален'
 		redirect_to root_path
 	end
 
