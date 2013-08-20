@@ -1,15 +1,22 @@
-# coding: utf-8
+/# coding: utf-8
 h1 Продукты
 
 table class="table table-hover"
   tbody
     - @products.each do |product|
-      tr.one-product 
+      tr.one-product
         td
-          .left
-            .name = product.name
-            .foto = image_tag(product.image_url)
-            .price = number_to_currency(product.price)
-            .links #{link_to('edit', edit_product_path(product), class: "btn")} #{link_to('delete', product_path(product), method: :delete, confirm: "Вы уверены?", class: "btn")}
-          .description = sanitize(product.description)
+          .foto = image_tag(product.image_url)
+        td
+          .list_description
+            dl
+              dt = product.name
+              dd = truncate(strip_tags(product.description), length: 80)
+        td
+          .price
+            = number_to_currency(product.price)
+        td
+          .list_actions
+            .links #{link_to('show', product, class: "btn")} #{link_to('edit', edit_product_path(product), class: "btn")} #{link_to('delete', product, method: :delete, confirm: "Вы уверены?", class: "btn")}
+
 = link_to 'new', new_product_path, class: "btn btn-primary"

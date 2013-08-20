@@ -1,16 +1,16 @@
-# coding: utf-8
+/# coding: utf-8
 doctype html
 html
-	head
-		title = full_title(yield(:title))
-		= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
-		= javascript_include_tag "application", "data-turbolinks-track" => true
-		= csrf_meta_tags
-		/[if lt IE 9] script src="http://html5shim.googlecode.com/svn/trunk/html5.js"
-	body
-		= render 'layouts/header'
-		.container
-			- flash.each do |key, value|
-				= content_tag(:div, value, class: "alert alert-#{key}")
-			= yield
-			= render 'layouts/footer'
+  head
+    title = full_title(yield(:title))
+    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+    /[if lt IE 9] script src="http://html5shim.googlecode.com/svn/trunk/html5.js"
+  body
+    = render 'layouts/header'
+    .container
+      - flash.each do |key, value|
+        = content_tag(:div, value, class: "alert alert-#{key}")
+      = yield
+      = render 'layouts/footer'

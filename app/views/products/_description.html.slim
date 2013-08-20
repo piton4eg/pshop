@@ -1,0 +1,16 @@
+.form-for = form_for(@product) do |f|
+  = render 'shared/error_messages'
+
+  = f.label :name
+  = f.text_field :name
+  
+  = f.label :description
+  = f.text_area :description, rows: 6
+
+  = f.label :image_url
+  = f.text_field :image_url
+
+  = f.label :price
+  = f.text_field :price
+
+  = f.submit "Добавить", class: "action btn btn-primary"
