@@ -1,0 +1,9 @@
+h1 Каталог
+- @products.each do |product|
+  .entry
+    = image_tag(product.image_url)
+    h3 = product.name
+    = sanitize(product.description)
+    .price_line
+      span = product.price
+    = button_to "Добавить в корзину", line_items_path(product_id: product)
