@@ -15,6 +15,7 @@ html
           - flash.each do |key, value|
             = content_tag(:div, value, class: "alert alert-#{key}")
           = yield
-        .span2
-          h3 Корзина
+        .span3
+          #cart
+            = render @cart
       = render 'layouts/footer'

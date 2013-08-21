@@ -1,0 +1,8 @@
+.cart_title Ваша корзина
+table
+  = render cart.line_items
+  tr class="total_line"
+    td colspan="2" Итого
+    td class="total_cell" = number_to_currency(cart.total_price)
+
+= button_to "Очистить корзину", cart, method: :delete, confirm: "Вы уверены?"
