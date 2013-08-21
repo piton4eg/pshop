@@ -1,4 +1,13 @@
-h1 Ваша корзина
-ul
+.cart_title Ваша корзина
+table
   - @cart.line_items.each do |item|
-    li = item.product.name
+    tr
+      td = "#{item.quantity} шт."
+      td = item.product.name
+      td = number_to_currency(item.total_price)
+  tr class="total_line"
+    td colspan="2" Итого
+    td class="total_cell" = number_to_currency(@cart.total_price)
+
+= button_to "Очистить корзину", @cart, method: :delete, confirm: "Вы уверены?"
+
