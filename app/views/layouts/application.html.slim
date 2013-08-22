@@ -14,8 +14,12 @@ html
         .span9
           - flash.each do |key, value|
             = content_tag(:div, value, class: "alert alert-#{key}")
-          = yield
+          #store
+            = yield
         .span3
-          #cart
-            = render @cart
+          - if @cart
+            = hidden_div_if(@cart.line_items.empty?, id: 'cart') do
+              = render @cart
+            end
+
       = render 'layouts/footer'

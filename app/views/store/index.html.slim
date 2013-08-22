@@ -6,4 +6,4 @@ h1 Каталог
     = sanitize(product.description)
     .price_line
       span = product.price
-    = button_to "Добавить в корзину", line_items_path(product_id: product)
+    = button_to "Добавить в корзину", line_items_path(product_id: product), remote: true

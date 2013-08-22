@@ -1,4 +1,10 @@
-tr
-  td = "#{line_item.quantity} шт."
-  td = line_item.product.name
-  td = number_to_currency(line_item.total_price)
+- if line_item == @current_item
+  tr id="current_item"
+    td = "#{line_item.quantity} шт."
+    td = line_item.product.name
+    td = number_to_currency(line_item.total_price)
+- else
+  tr
+    td = "#{line_item.quantity} шт."
+    td = line_item.product.name
+    td = number_to_currency(line_item.total_price)

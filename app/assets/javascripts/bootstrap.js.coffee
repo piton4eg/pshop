@@ -1,4 +1,3 @@
-jQuery ->
-  $("a[rel=popover]").popover()
-  $(".tooltip").tooltip()
-  $("a[rel=tooltip]").tooltip()
+$ ->
+  $('#store .entry > img').click ->
+    $(this).parent().find(':submit').click()

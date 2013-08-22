@@ -5,4 +5,4 @@ table
     td colspan="2" Итого
     td class="total_cell" = number_to_currency(cart.total_price)
 
-= button_to "Очистить корзину", cart, method: :delete, confirm: "Вы уверены?"
+= button_to "Очистить корзину", cart, method: :delete, confirm: "Вы уверены?", remote: true
