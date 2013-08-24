@@ -14,4 +14,11 @@ module ApplicationHelper
     end
     content_tag("div", attributes, &block)
   end
+
+  def current_item_if(condition, attributes = {}, &block)
+    if condition
+      attributes["id"] = "current_item"
+    end
+    content_tag("tr", attributes, &block)
+  end
 end
