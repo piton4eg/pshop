@@ -31,3 +31,4 @@ end
 
 gem 'pg', '0.15.1'
 gem 'rails-i18n'
+gem 'will_paginate', '~> 3.0'
