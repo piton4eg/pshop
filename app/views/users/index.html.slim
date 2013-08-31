@@ -1,0 +1,19 @@
+h1 Список пользователей
+
+table
+  tr
+    th Имя
+    th
+    th
+    th
+
+  - @users.each do |user|
+    tr
+      td = user.name
+      td = link_to 'Показать', user
+      td = link_to 'Редактировать', edit_user_path(user)
+      td = link_to 'Удалить', user, :confirm => 'Вы уверены?', :method => :delete
+
+br
+
+= link_to 'Новый пользователь', new_user_path

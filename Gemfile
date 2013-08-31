@@ -24,6 +24,7 @@ gem 'turbolinks'
 gem 'jbuilder', '1.0.2'
 gem 'slim-rails'
 gem 'bootstrap-sass', '2.3.1.0'
+gem 'bcrypt-ruby'
 
 group :doc do
   gem 'sdoc', require: false
